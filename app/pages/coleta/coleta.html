@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      PosTransplante - Coleta de Dados
+    </ion-title>
+    <button menuToggle>
+		<ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding  class='coleta'>
+  <!--h1>{{getNome()}}</h1>
+  The world is your oyster. {{peso}}
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Peso</ion-label>
+      <ion-input type='text' [(ngModel)]='peso'></ion-input>
+      
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>PA</ion-label>
+      <ion-input type='text' [(ngModel)]="pa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>HGT</ion-label>
+      <ion-input type='text' [(ngModel)]="hgt"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Controle Hidrico</ion-label>
+      <ion-input type='text' [(ngModel)]="controle"></ion-input>
+    </ion-item>
+  </ion-list>
+
+   <p>
+     <button secondary full (click)="Salvar()">Salvar</button>
+   </p>
+    <p>
+     <button secondary full (click)="getlistColeta()">Cancelar</button>
+   </p>
+ 
+ <!--li *ngFor="let item of List">
+        <p>item = {{item.peso}}<p>
+      </li>
+ <p>item = {{item}}<p-->
+  <ion-grid>
+    <ion-row>
+      <ion-col width-10>Id</ion-col>
+      <ion-col width-10>Peso</ion-col>
+      <ion-col width-10>PA</ion-col>
+      <ion-col width-10>HGT</ion-col>
+      <ion-col width-10>Controle Hidrico</ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-item *ngFor="let item of List" (click)="itemSelect(item)">
+        <ion-row>
+        <ion-col width-10>{{item.id}}</ion-col>
+         <ion-col width-10>{{item.peso}}</ion-col> 
+         <ion-col width-10>{{item.PA}}</ion-col>
+         <ion-col width-10>{{item.hgt}}</ion-col>
+         <ion-col width-10>{{item.controle}}</ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>  
+  </ion-grid>
+   
+     
+</ion-content>
+<!--ion-content class="buttons-fab-page">
+ 
+</ion-content-->
